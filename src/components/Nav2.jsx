@@ -2,6 +2,7 @@ import Logo from '../assets/Logo1.jpg';
 import { AiOutlineHome, AiOutlineGift } from 'react-icons/ai';
 import { FaRecycle } from 'react-icons/fa6';
 import { RiApps2Line } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 
 const Nav2 = () => {
   return (
@@ -14,28 +15,28 @@ const Nav2 = () => {
             </div>
             <ul className="mt-6 space-y-2 tracking-wide">
               <li className="min-w-max">
-                <a href="#home" aria-label="dashboard" className="relative flex items-center space-x-4 bg-gradient-to-r from-sky-600 to-cyan-400 px-4 py-3 text-white">
+                <Link to='/' aria-label="dashboard" className="relative flex items-center space-x-4 bg-gradient-to-r from-sky-600 to-cyan-400 px-4 py-3 text-white">
                   <AiOutlineHome className="h-5 w-5" />
                   <span className="-mr-1 font-medium">Home</span>
-                </a>
+                </Link>
               </li>
               <li className="min-w-max">
                 <a href="#beneficios" className="bg group flex items-center space-x-4 rounded-full px-4 py-3 text-gray-600">
                   <AiOutlineGift className="h-5 w-5" />
-                  <span className="group-hover:text-gray-700">Categories</span>
+                  <span className="group-hover:text-gray-700">Beneficios</span>
                 </a>
               </li>
               <li className="min-w-max">
                 <a href="#carbono" className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
                   <FaRecycle className="h-5 w-5" /> 
-                  <span className="group-hover:text-gray-700">Carbono</span>
+                  <span className="group-hover:text-gray-700">Posidonia</span>
                 </a>
               </li>
               <li className="min-w-max">
-                <a href="#" className="relative flex items-center space-x-4 bg-gradient-to-r from-amber-700 to-amber-300 px-4 py-3 text-white">
+                <Link to='/dapp' className="relative flex items-center space-x-4 bg-gradient-to-r from-amber-700 to-amber-300 px-4 py-3 text-white">
                   <RiApps2Line className="h-5 w-5" />
                   <span className="group-hover:text-gray-700">DAPP</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

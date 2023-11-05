@@ -4,7 +4,7 @@ const Carbono = () => {
   return (
     <section id='carbono' className="min-h-screen flex flex-col bg-[#f5f5f7] justify-center items-center py-12">
         <div className='justify-center items-center text-center pb-6 pt-12 max-lg:pt-16'>
-            <h2 className='text-2xl font-semibold text-slate-800'>TONELADAS DE CARBONO RETENIDAS POR KLIMADAO</h2>
+            <h2 className='text-2xl font-semibold text-slate-800'>COMPENSACIONES DE POSIDONIA RETENIDAS POR POSIDONIA DAO</h2>
             <p className='text-8xl font-bold text-slate-800 max-md:text-4xl'>17.675.350</p>
         </div>
         <div className='flex flex-wrap justify-center mt-8 max-lg:mt-2'>
