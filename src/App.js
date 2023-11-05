@@ -1,18 +1,12 @@
-import Nav from "./components/Nav";
-import Beneficios from "./sections/Beneficios";
-import Carbono from "./sections/Carbono";
+import Nav2 from "./components/Nav2";
 import Footer from "./sections/Footer";
-import Home from "./sections/Home";
-import Image from "./sections/Image";
+import General from "./sections/General";
 
 export default function App() {
   return (
     <main>
-      <Nav />
-      <Home />
-      <Beneficios />
-      <Image />
-      <Carbono />
+      <Nav2 />
+      <General />
       <Footer />
     </main>
   )
