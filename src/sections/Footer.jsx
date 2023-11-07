@@ -1,8 +1,9 @@
 import { navLinks, socialMedia } from '../constants';
 
 const Footer = () => {
+
   return (
-    <footer className="py-6 bg-[#f5f5f7] mt-16 flex justify-evenly">
+    <footer className="py-6 bg-[#f5f5f7] pt-16 flex justify-evenly">
         <div>
             <ul className='flex-1 flex justify-center items-center gap-8 max-lg:flex-col'>
                 {navLinks.map((item) => (

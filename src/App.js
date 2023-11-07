@@ -9,7 +9,7 @@ export default function App() {
     <Router>
       <Nav2 />
       <Routes>
-        <Route path='/' exact element={<General />} />
+        <Route path='/' element={<General />} />
         <Route path='/dapp' element={<Dapp />} />
       </Routes>
       <Footer />

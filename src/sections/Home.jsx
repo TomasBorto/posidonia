@@ -2,7 +2,7 @@ import Arbol from '../assets/Posidonia.jpg';
 
 const Home = () => {
   return (
-    <section className="bg-[#f5f5f7] max-lg:min-h-[100vh] pt-[20vh] min-h-screen" id='home'>
+    <section className="bg-[#f5f5f7] pt-[20vh] min-h-screen" id='home'>
         <div className="max-container flex justify-evenly h-[50vh]">
             <div className=" w-5/12 bg-white  rounded-[20px] max-[360px]:rounded-none shadow-2xl px-10 py-16 h-96 max-sm:w-10/12 max-sm:z-10 max-[360px]:w-full">
                 <h3 className="font-palanquin text-2xl leading-normal font-bold">BIENVENIDO A 
