@@ -1,11 +1,12 @@
-import { FaTelegram, FaTwitter, FaRedditAlien } from "react-icons/fa6";
-import foto from '../assets/image.webp';
+import { FaTelegram, FaSquareXTwitter } from "react-icons/fa6";
+import ibiza from '../assets/ibiza.jpg';
+import autos from '../assets/autos.jpg';
+import gasolinera from '../assets/gasolinera.jpg';
 
 export const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#beneficios", label: "Beneficios" },
-    { href: "#carbono", label: "Carbono" },
-    { href: "t.me/PosidoniaDAO", label:`Telegram` },
+    { href: "/#home", label: "Home" },
+    { href: "/#beneficios", label: "Beneficios" },
+    { href: "/#Posidonia", label: "Posidonia" },
 ];
 
 // export const footerLinks = [
@@ -16,26 +17,25 @@ export const navLinks = [
 // ]
 
 export const socialMedia = [
-    { icon: <FaTelegram />, href: "https://web.telegram.org/" },
-    { icon: <FaTwitter />, href: "https://web.telegram.org/" },
-    { icon: <FaRedditAlien />, href: "https://web.telegram.org/" },
+    { icon: <FaTelegram />, href: "t.me/PosidoniaDAO" },
+    { icon: <FaSquareXTwitter />, href: "https://twitter.com/PosidoniaDao" },
 ];
 
 export const carbonoTarjeta = [
     {
-        photo: foto,
-        title: "HECTAREAS DE BOSQUE",
-        number: "88.376"
+        photo: ibiza,
+        title: "M2 DE BOSQUE",
+        number: "72.500"
     },
     {
-        photo: foto,
-        title: "HECTAREAS DE BOSQUE",
-        number: "88.376"
+        photo: autos,
+        title: "AUTÓMOVIL ANUAL",
+        number: "30.000"
     },
     {
-        photo: foto,
-        title: "HECTAREAS DE BOSQUE",
-        number: "88.376"
+        photo: gasolinera,
+        title: "LITROS DE GASOLINA",
+        number: "5.000.000"
     }
 ]
 

@@ -1,26 +1,62 @@
 import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Dapp = () => {
 
   const [number, setNumber] = useState(0)
   const [message, setMessage] = useState(0)
+  const [conectado, setConectado] = useState(false)
 
   const [ boton1, setBoton1 ] = useState(true)
   const [ boton2, setBoton2 ] = useState(false)
   const [ boton3, setBoton3 ] = useState(false)
 
   const handleChange = e =>{
-    setMessage(e.target.value)
+    setMessage(Number(e.target.value))
+    
   }
 
-  const boton = `${boton1 ? "individuales": ""} ${boton2 ? "PYMES": ""} ${boton3 ? "Empresas": ""}`
+  const badRequest = () => {
+    toast.error('Compensacion Invalida', {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      });
+  }
 
-  const btnAct = 'bg-gradient-to-r from-sky-600 to-cyan-400 px-4 py-3 text-white px-6 py-2 font-semibold rounded-t-[20px] max-[450px]:px-2 max-[300px]:px-1'
+  const goodRequest = () => {
+    toast.success('Compra exitosa', {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      });
+  }
+
+  // if(isNaN(number)){
+  //   badRequest()
+  // }else {
+  //   goodRequest()
+  // }
+
+  const boton = `${boton1 ? "Individuales": ""} ${boton2 ? "PYMES": ""} ${boton3 ? "Empresas": ""}`
+
+  const btnAct = 'bg-[#006c36] px-4 py-3 text-white px-6 py-2 font-semibold rounded-t-[20px] max-[450px]:px-2 max-[300px]:px-1'
   const btnNoAct = 'bg-white px-6 py-2 rounded-t-[20px] border-s-fuchsia-800 font-semibold text-slate-800 max-[450px]:px-2 max-[300px]:px-1'
   return (
     <section className='min-h-screen ml-[6vh] bg-[#f5f5f7] flex flex-col justify-center items-center'>
-      <button className='absolute py-3 px-8 top-12 right-5 rounded-[20px] bg-gradient-to-r from-amber-700 to-amber-300 text-white-400 font-bold'>Conectar</button>
-      <h1 className='text-8xl max-[670px]:text-4xl text-center font-bold text-slate-800 px-16 max-[800px]:mt-[100px]'>Posidonia Dapp</h1>
+      <button onClick={(conectado) ? () => {setConectado(false)} : () => {setConectado(true)}} className='absolute py-3 px-8 top-12 right-5 rounded-[20px] bg-[#006c36] text-white font-bold'>{(conectado) ? "Conectado" : "Conectar"}</button>
+      <h1 className='text-8xl max-[670px]:text-4xl text-center font-bold text-[#006c36] px-16 max-[800px]:mt-[100px]'>Posidonia Dapp</h1>
       <div className='w-[600px] mt-12 max-[670px]:w-[400px] max-[450px]:w-11/12'>
         <div className='w-full justify-evenly flex'>
           <button onClick={() => {setBoton1(true); setBoton2(false); setBoton3(false)}} className={(boton1) ? btnAct : btnNoAct}>Indivual</button>
@@ -36,8 +72,10 @@ const Dapp = () => {
             onChange={handleChange}
              
             class="rounded-l-lg p-4 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white" placeholder={0}/>
-	        	<button onClick={() => setNumber(Number(message) + number)} class="px-8 rounded-r-lg bg-yellow-400  text-gray-800 font-bold p-4 uppercase border-yellow-500 border-t border-b border-r">Compensar</button>
+	        	<button onClick={isNaN((message)) ? () => {badRequest()}  : () => {setNumber((message) + number); goodRequest()}} class="px-8 rounded-r-lg bg-[#006c36] text-white font-bold p-4 uppercase border-yellow-500 border-t border-b border-r">Compensar</button>
+            
 	        </div>
+          
           <button
             onClick={() => setNumber(0)}
             class="middle none center mr-4 rounded-lg bg-red-500 p-4 font-sans font-bold uppercase text-white shadow-md shadow-red-500/20 transition-all hover:shadow-lg hover:shadow-red-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
@@ -45,10 +83,8 @@ const Dapp = () => {
           >
             Vender Compensaciones
           </button>
-          {/* {boton1 ? "boton1": ""}
-          {boton2 ? "boton2": ""}
-          {boton3 ? "boton3": ""} */}
         </div>
+        <ToastContainer />
       </div>
     </section>
   )

@@ -13,11 +13,21 @@
 }
 
 .bg-photo1{
-  background-image: url('./assets/ImagenPlanta.jpg');
+  background-image: url('./assets/fondo2.jpg');
   background-position: center;
   background-size: cover;
 }
 
+.bg-photo2{
+  background-image: url('./assets/nacra.jpeg');
+  background-position: center;
+  background-size: cover;
+}
+.bg-photo3{
+  background-image: url('./assets/pradera\ normal.jpeg');
+  background-position: center;
+  background-size: cover;
+}
 .background-video {
   object-fit: cover;
   z-index: -1;

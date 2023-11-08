@@ -1,5 +1,5 @@
-import Logo from '../assets/Logo1.jpg';
-import { AiOutlineHome, AiOutlineGift } from 'react-icons/ai';
+import Logo from '../assets/LOGO.png';
+import { AiOutlineHome, AiOutlineCodeSandbox } from 'react-icons/ai';
 import { FaRecycle } from 'react-icons/fa6';
 import { RiApps2Line } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
@@ -20,7 +20,7 @@ const Nav2 = () => {
         <div className="flex h-screen flex-col justify-between pt-2 pb-6">
           <div>
             <div className="w-max p-2.5">
-              <img src={Logo} className="w-8" alt="" />
+              <img src={Logo} className="w-10" alt="" />
             </div>
             <ul className="mt-6 space-y-2 tracking-wide">
               <li className="min-w-max">
@@ -31,7 +31,7 @@ const Nav2 = () => {
               </li>
               <li className="min-w-max">
                 <a href="/#beneficios" onClick={() => {setActive1(false); setActive2(true); setActive3(false)}} className={(active2) ? activeStyle : noActiveStyle}>
-                  <AiOutlineGift className="h-5 w-5" />
+                  <AiOutlineCodeSandbox className="h-5 w-5" />
                   <span className="group-hover:text-gray-700">Beneficios</span>
                 </a>
               </li>

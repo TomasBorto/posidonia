@@ -1,4 +1,5 @@
 import { navLinks, socialMedia } from '../constants';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 
@@ -13,6 +14,11 @@ const Footer = () => {
                     </a>
                   </li>
                 ))}
+                <li>
+                  <Link to='/dapp' className="font-montserrat leading-normal text-lg text-slate-gray hover:text-black">
+                    DAPP
+                  </Link>
+                </li>
             </ul>
         </div>
         <div>
